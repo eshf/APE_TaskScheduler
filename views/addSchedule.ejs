@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="basic.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container px-4">
+        <h1> <a href="/employee"><button type="button" class="btn btn-primary">Back</button></a> Create Weekly Schedules</h1>
+    </div>
+    <br>
+    <div class="container">
+
+
+        <table class="table" id="table" name="table">
+
+            <thead>
+                <tr>
+                    <th scope="col">Full Name</th>
+                    <th scope="col" colspan="2">Monday</th>
+                    <th scope="col" colspan="2">Tuesday</th>
+                    <th scope="col" colspan="2">Wednesday</th>
+                    <th scope="col" colspan="2">Thursday</th>
+                    <th scope="col" colspan="2">Friday</th>
+                </tr>
+            </thead>
+
+            <tbody id="adminBody">
+                <%management.forEach(allMgmt => {%>
+                    <tr>
+                        <th scope="col" id="fullName" name="fullName">
+                            <%=allMgmt.fullName %>
+                        </th>
+                        <td scope="col" id="mondayShift1" name="mondayShift1">
+                            <select class="form-select form-select-sm" aria-label="Default select example" id="mondayShift1" required onchange="test();">
+                                <option selected></option>
+                                <option value="AmenitiesCtr">Amenities Centre</option>
+                                <option value="F and B">F and B</option>
+                                <option value="Gas">Gas</option>
+                              </select></td>
+                        <td scope="col" id="mondayShift2" name="mondayShift2">
+                            <select class="form-select form-select-sm" aria-label="Default select example" id="mondayShift2" onchange="a(this, 'id2')" required>
+                            <option selected></option>
+                            <option value="AmenitiesCtr">Amenities Centre</option>
+                            <option value="F and B">F and B</option>
+                            <option value="Gas">Gas</option>
+                          </select>
+                        </td>
+                        </td>
+                        <td scope="col" id="tuesdayShift1" name="tuesdayShift1">
+                            <select class="form-select form-select-sm" aria-label="Default select example" id="tuesdayShift1">
+                            <option selected></option>
+                            <option value="AmenitiesCtr">Amenities Centre</option>
+                            <option value="F and B">F and B</option>
+                            <option value="Gas">Gas</option>
+                          </select>
+                        </td>
+                        <td scope="col" id="tuesdayShift2" name=tuesdayShift2 ">
+                            <select class="form-select form-select-sm " aria-label="Default select example " id="tuesdayShift2 ">
+                            <option selected></option>
+                            <option value="AmenitiesCtr ">Amenities Centre</option>
+                            <option value="F and B ">F and B</option>
+                            <option value="Gas ">Gas</option>
+                          </select>
+                        </td>
+                          <td scope="col " id="wednesdayShift1 " name="wedShift1 ">
+                            <select class="form-select form-select-sm " aria-label="Default select example " id="wedShift1 ">
+                            <option selected></option>
+                            <option value="AmenitiesCtr ">Amenities Centre</option>
+                            <option value="F and B ">F and B</option>
+                            <option value="Gas ">Gas</option>
+                          </select>
+                        </td>
+                          <td scope="col " id="wednesdayShift2 " name="wednesdayShift2 ">
+                            <select class="form-select form-select-sm " aria-label="Default select example " id="wednesdayShift2 ">
+                            <option></option>
+                            <option value="AmenitiesCtr ">Amenities Centre</option>
+                            <option value="F and B ">F and B</option>
+                            <option value="Gas ">Gas</option>
+                          </select>
+                        </td>
+                          <td scope="col " id="thursdayShift1 " name="thursdayShift1 ">
+                            <select class="form-select form-select-sm " aria-label="Default select example " id="thursdayShift1 ">
+                            <option selected></option>
+                            <option value="AmenitiesCtr ">Amenities Centre</option>
+                            <option value="F and B ">F and B</option>
+                            <option value="Gas ">Gas</option>
+                          </select>
+                        </td>
+                          <td scope="col " id="thursdayShift2 " name="thursdayShift2 ">
+                            <select class="form-select form-select-sm " aria-label="Default select example " id="thursdayShift2 ">
+                            <option selected></option>
+                            <option value="AmenitiesCtr ">Amenities Centre</option>
+                            <option value="F and B ">F and B</option>
+                            <option value="Gas ">Gas</option>
+                          </select>
+                        </td>
+                          <td scope="col " id="fridayShift1 " name="fridayShift1 ">
+                            <select class="form-select form-select-sm " aria-label="Default select example " id="fridayShift1 ">
+                            <option selected></option>
+                            <option value="AmenitiesCtr ">Amenities Centre</option>
+                            <option value="F and B ">F and B</option>
+                            <option value="Gas ">Gas</option>
+                          </select>
+                        </td>
+                          <td scope="col " id="fridayShift1 " name="friShift1 ">
+                            <select class="form-select form-select-sm " aria-label="Default select example " id="fridayShift1 ">
+                            <option selected></option>
+                            <option value="AmenitiesCtr ">Amenities Centre</option>
+                            <option value="F and B ">F and B</option>
+                            <option value="Gas ">Gas</option>
+                          </select>
+                        </td>
+                        </input<>
+                      <%})%>
+                      
+                    </tbody>
+                    <tfoot>
+         
+                    </tfoot>
+                  </table>
+                  <input id="week " name="week " placeholder="Week/Year " required></input>
+                  <button type="button " id="publish " class="btn btn-success ">Publish</button>
+          
+            
+              <br>
+    
+              <button type="button " class="btn btn-warning " id="draftSave ">Save Draft</button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj " crossorigin="anonymous "></script>
+        <script src="index.js ">
+            
+        </script>
+    </body>
+</html>

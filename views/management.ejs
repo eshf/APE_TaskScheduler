@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <div class="container px-4">
+        <h1><a href="/"><button type="button" class="btn btn-primary">Back</button></a> Employee Page</h1>
+        <br>
+
+        <form class="row g-3" action="/employee" method="post" onsubmit="this.submit(); this.reset(); return false;">
+            <div class="row g-3">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Name" aria-label="First name" name="firstName" id="firstName" required>
+                </div>
+                <button type="submit" class="btn btn-success mb-3">Add Staff</button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <%employee.forEach(allEmployees => {%>
+                    <tr>
+                        <th scope="col">
+                            <%=allEmployees.fullName %>
+                        </th>
+                        <th scope="col">
+                            <%=allEmployees._id %>
+                        </th>
+                        <th scope="col">
+                            <form action="/allEmployees /<%= allEmployees.userid %>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                        </th>
+                        <%})%>
+            </tbody>
+        </table>
+        <br>
+        <a href="/create"><button type="button" class="btn btn-primary">Create Weekly Schedule</button></a>
+    </div>
+
+
+
+    <script src="./js/admin.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

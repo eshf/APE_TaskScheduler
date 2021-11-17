@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container px-4">
+        <h1><a href="/"><button type="button" class="btn btn-primary">Back</button></a> View Work Schedules</h1>
+
+        <br>
+
+        <div class="container">
+            <div id="schedule_List">
+                <div class="row">
+                    <button id="displayKeys" onclick="displayItems();" class="btn btn-primary">View Schedules</button> <br> <br>
+                </div>
+                <br>
+                <div class="row">
+                    <ul id="keyList" class="list-group">
+                    </ul>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                        <label>Enter Week: </label>
+
+                    </div>
+
+                    <div class="col-8">
+                        <input id="keySearch" placeholder="e.g. Week 2, 2021">
+
+                    </div>
+
+                    <div class="col">
+                        <button id="showSchedule" onclick="displaySchedules();" class="btn btn-success">Get schedule</button>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <br> <br>
+            </div><br><br>
+            <div id="employeeData">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="basicstaff.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+
+</html>
