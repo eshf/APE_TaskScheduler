@@ -101,7 +101,7 @@ app.post('/views/register', async(req, res) => {
 // user login function
 const verifyUserLogin = async(userid, passwrd) => {
     try {
-        const user = await User.findOne({ userid }).lean()
+        const user = await user.findOne({ userid }).lean()
 
         if (!user) {
             return { status: 'error', error: 'user not found' }
