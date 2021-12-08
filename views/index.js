@@ -283,7 +283,7 @@ publishedTable.addEventListener('click', () => {
                 sundayShift2FandB: sundayShift2FandBText,
                 sundayShift2Gas: sundayShift2GasText,
             };
-            load.push(dataSet);
+            load.push(dataset);
             return load;
         }, []);
         return dataset;
