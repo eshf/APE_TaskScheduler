@@ -5,8 +5,8 @@ publishedTable.addEventListener('click', () => {
     const table = document.querySelector('#table');
     const tbody = table.tBodies[0];
 
-    var monShift1 = document.getElementById("monShift1");
-    var monShift1Text = monShift1.options[monShift1.selectedIndex].value;
+    var mondayShift1 = document.getElementById("mondayShift1");
+    var mondayShift1Text = mondayShift1.options[mondayShift1.selectedIndex].value;
 
 
 
@@ -23,7 +23,7 @@ publishedTable.addEventListener('click', () => {
 
 
     var mondayShift2 = document.getElementById("mondayShift2");
-    var mondaydayShift2Text = mondayShift2.options[mondayShift2.selectedIndex].value;
+    var mondayShift2Text = mondayShift2.options[mondayShift2.selectedIndex].value;
 
 
 
@@ -236,8 +236,10 @@ publishedTable.addEventListener('click', () => {
             const data = {
                 Name: fullName.textContent,
                 mondayShift1: mondayShift1Text,
+                mondayShift1AmenitiesCtr: mondayShift1AmenitiesCtrText,
+                mondayShift1FandB: mondayShift1FandBCtrText,
+                mondayShift1Gas: mondayShift1GasCtrText,
                 mondayShift2: mondayShift2Text,
-                mondayShift2AmenitiesCtr: mondayShift2AmenitiesCtrText,
                 mondayShift2FandB: mondayShift2FandBText,
                 mondayShift2Gas: mondayShift2GasText,
                 tuesdayShift1: tuesdayShift1Text,
